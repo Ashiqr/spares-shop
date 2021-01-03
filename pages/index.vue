@@ -22,6 +22,8 @@
         >
           GitHub
         </a>
+        <NuxtLink to="/vehicle">Vehicle</NuxtLink>
+        <NuxtLink to="/api/play">api play</NuxtLink>
       </div>
     </div>
   </div>

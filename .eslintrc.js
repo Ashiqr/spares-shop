@@ -14,5 +14,5 @@ module.exports = {
   plugins: [
   ],
   // add your custom rules here
-  rules: {}
+  rules: {'semi': 0, 'object-shorthand': 0, 'brace-style': 0}
 }
