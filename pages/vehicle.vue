@@ -25,6 +25,9 @@
             <b-form-tags input-id="input-6" v-model="form.Tags" />
         </b-form-group>
 
+        <!-- <b-form-file v-model="file1" :state="Boolean(file1)"  placeholder="Choose a file or drop it here..." drop-placeholder="Drop file here..."></b-form-file>
+        <div class="mt-3">Selected file: {{ file1 ? file1.name : '' }}</div> -->
+
       <b-button type="submit" variant="primary">Submit</b-button>
       <b-button type="reset" variant="danger">Reset</b-button>
     </b-form>
@@ -44,6 +47,7 @@ export default {
         Tags: [],
         Id: null
       },
+      file1: null,
       makes: [
         { text: 'Select One', value: null },
         'Opel',
@@ -113,6 +117,19 @@ export default {
           }
         })
         .catch((error) => { console.log(error) });
+    },
+    uploadImage () {
+      if (this.form.Id && this.file1) {
+        const formData = new FormData();
+        formData.append('file', this.file1);
+        this.$axios.$post('/api/play/upload?id=' + this.form.Id, formData)
+          .then((response) => {
+            console.log(response.status);
+          })
+          .catch((err) => {
+            console.log(err);
+          })
+      }
     }
   }
 };

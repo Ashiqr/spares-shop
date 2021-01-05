@@ -47,6 +47,7 @@ export default {
   },
   serverMiddleware: [
     { path: '/api/play', handler: '~/api/play.js' },
+    { path: '/api/search', handler: '~/api/search.js' },
   ],
 
   publicRuntimeConfig: {

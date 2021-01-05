@@ -6,23 +6,8 @@
         spares-shop
       </h1>
       <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-        <NuxtLink to="/vehicle">Vehicle</NuxtLink>
+        <NuxtLink to="/vehicleSearch" class="button--green">Search Vehicles</NuxtLink>
+        <NuxtLink to="/vehicle" class="button--green">New Vehicle</NuxtLink>
         <NuxtLink to="/api/play">api play</NuxtLink>
       </div>
     </div>

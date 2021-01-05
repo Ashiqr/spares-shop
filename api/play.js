@@ -35,30 +35,29 @@ app.get('/', (req, res) => {
   });
 });
 
-app.post('/upload', (req, res) =>{
-  // var newPath = path.resolve(__dirname, '../assets/vehicle/' + req.query.id.toString());
-  // var form = new formidable.IncomingForm();
-  // form.parse(req, function (err, fields, files) {
-  //   if (err) {
-  //     res.end(err.message);
-  //   }
-  //   var newPath = path.resolve(__dirname, '../assets/vehicle/' + req.query.id.toString()  + '/' + files.file.name);
-  //   fs.appendFile(newPath, files.file, function (err) {
-  //     if (err) throw err;
-  //     console.log('Updated!');
-  //   }); 
-
-    // var oldPath = path.resolve(__dirname, files.file.path);
-    
-    // fs.rename(oldPath, newPath, function (err) {
-    //   if (err) {
-    //     res.end(err.message);
-    //   }
-    //   else{
-    //     res.end('File uploaded');
-    //   }
-    // });
-  // });
-})
+// app.post('/upload', (req, res) =>{
+//   var form = new formidable.IncomingForm();
+//   form.parse(req, function (err, fields, files) {
+//     if (err) {
+//       res.end(err.message);
+//     }
+//     var newPath = path.resolve(__dirname, '../assets/vehicle/' + req.query.id.toString()  + '/' + files.file.name);
+//     // var oldPath = path.resolve(__dirname, files.file.path);
+//     fs.writeFile(newPath, files.file(), () => {
+//       res.end('File uploaded');
+//     })
+//     .catch((err) => {
+//       res.end(err.message);
+//     });
+//     // fs.rename(oldPath, newPath, function (err) {
+//     //   if (err) {
+//     //     res.end(err.message);
+//     //   }
+//     //   else{
+//     //     res.end('File uploaded');
+//     //   }
+//     // });
+//   });
+// })
 
 module.exports = app;

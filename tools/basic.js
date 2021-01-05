@@ -32,5 +32,20 @@ function CleanQuotes(data){
     return data;
 }
 
+function AutoTag(details, tags) {
+    details.forEach(element => {
+        if (tags.indexOf(element) < 0) {
+            tags.push(element);
+        }
+    });
+    return tags;
+}
+
+function MakeSearchTags(count, operator) {
+    return Array(count).fill('Tags LIKE \'%\'|| ? || \'%\'').join(' ' + operator + ' ');
+}
+
 exports.ObjectToArray = ObjectToArray;
 exports.CleanQuotes = CleanQuotes;
+exports.AutoTag = AutoTag;
+exports.MakeSearchTags = MakeSearchTags;
